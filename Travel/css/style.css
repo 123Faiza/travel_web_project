@@ -1,0 +1,813 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+/* ####################### html element styling ################# */
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+ul li{
+    list-style: none;
+}
+a{
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+p,li{
+    font-size: 1.6rem;
+    margin-bottom: 0.5em;
+}
+h1,h2,h3{
+    margin-bottom: 0.5em;
+   
+    font-weight: 500;
+}
+
+/* ######################## utility classes ############################ */
+
+.container{
+    max-width: 1200px;
+  /* ########### 90% eslye ta k screen choti bari krne se bh side me space rhe ##########   */
+    width: 90%;
+/* ############ center me krne k lye ############# */
+    margin: 0 auto;
+}
+
+.large_heading{
+    font-size: 3.5rem;
+}
+.mid-heading{
+    font-size: 2.2rem;
+
+}
+.text-red{
+    color: #e63946;
+}
+.text-light{
+    color: #f4f4f4;
+}
+.text-black{
+    color: #333333;
+}
+.tetx-gray{
+    color: #555555
+}
+
+.btn{
+    text-transform: uppercase;
+    display: inline-block;
+    padding: o.5em 1.5em ;
+    margin: 0.5em 0;
+    font-weight: 500;
+}
+.btn-primary{
+background-color: white;
+border-radius: 10em;
+padding: 0.5em;
+
+}
+.btn-primary:hover{
+    background: #dddddd;
+}
+
+.btn-secondary{
+    background-color:white;
+    border: 2px solid red;
+    border-radius: 1.5em;
+    padding: 0.25em;
+     color:red ;
+    }
+    .btn-secondary:hover{
+        background: #dddddd;
+    }
+
+.bg-dark{
+background-color: #263238;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ############## header styling ######################### */
+
+.header{
+    position: relative;
+    height: 95vh;
+    
+     /* we use linear gradient to do background more dark  */
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../img/header-image.jpg');
+    
+    /* to keep background on center */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    }
+
+
+.navbar .logo{
+    color:white;
+    letter-spacing: 0.15em;
+    font-size:3.5rem;
+
+}
+.navbar a:link,
+ .navbar a:visited
+{
+    color:#f4f4f4;
+    
+}
+.navbar a:hover{
+    border-bottom: 1px solid #f4f4f4;
+    color: white;
+}
+
+.navbar a{
+    padding-bottom: 0.3rem;
+}
+.navbar .logo{
+
+    float: left;
+    padding: 1rem;
+    margin-top: 1rem;
+    color: white;
+}
+
+.navbar .list_item{
+    float: right;
+    letter-spacing: 0.15em;
+    padding: 1rem;
+    margin-top: 1rem;
+    word-spacing: 0.5em;
+
+}
+.navbar::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+ .navbar .list_items{
+    display: inline-block;
+
+}
+
+
+                 /* ################ header-content styling ############  */
+.header-content h1{
+text-transform: uppercase;
+font-size: 500;
+}
+.header-content p{
+    text-transform: uppercase;
+    
+    }
+    .header-content{
+        /* #### isko absolute r iske parent yani header ko relative krenge######## */
+        position: absolute;
+       
+        top: 50%;
+        left: 50%;
+     /* ##############   to do in center we use transform ########## */
+        transform: translate(-50%,-50%);
+
+        text-align: center;
+        background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
+    }
+
+    /* ############ showcase styling ###########  */
+
+.showcase{
+    /* border: 5px solid red; */
+    background: #dddddd;
+    padding: 10rem 0;
+    /* box-sizing: border-box; */
+
+}
+
+.row {
+    /* border: 5px solid green;  */
+    /* position: relative; */
+/* line-height: 1.5em; */
+text-align: center;
+  height: 350px;
+  width: 50%;
+  background: #ffffff;
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.384);
+ 
+
+}
+.row1 .img-box , .row2 .text-box{
+    float: left;
+    width: 50%;
+    
+}
+.row2 .img-box , .row1 .text-box{
+    
+    float: right;
+    width: 50%;
+    /* padding: 0.5em; */
+}
+.row .img-box{
+    /* border:red 5px solid; */
+    height: 100%;
+}
+.row .text-box{
+    /* border:red 5px solid; */
+    padding: 0.5em;
+   
+    /* height: 100%; */
+    
+}
+
+.row1{
+    margin-bottom: 10rem;
+    
+}
+
+.row .img-box img{
+    height: 100%;
+    width: 100%;
+    /* box-sizing: border-box; */
+    object-fit: cover;
+    /* background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;*/
+} 
+
+/* .row1 .img-box{
+    background: url('../img/showcase-photo1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+
+}
+.row2 .img-box{
+    background: url('../img/showcase-photo2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+} */
+.text-box h1{
+    font-weight: 600;
+    padding: 0.5rem;
+    /* border: black solid 2px; */
+    /* width: 120%; */
+    /* padding: 0.5em 0; */
+    /* margin-bottom: 10px; */
+}
+.container .row .text-box p{
+    /* position: absolute;
+    top: 100%;
+    left: 50%; */
+    /* width: 120%; */
+    /* border: black solid 2px; */
+    font-size: 1.5rem;
+    /* margin-bottom: 50px; */
+    /* transform: translate(-50%,-50%); */
+    
+}
+.container .row .text-box a{
+    /* border: 2px solid red; */
+}
+
+/* .row-wrapper::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.row-wrapper{
+    border: black 5px solid;
+} */
+
+/* ################ feature styling#################### */
+
+.features{
+padding: 10rem 0;
+/* border: red solid 2.5px; */
+
+}
+.box-wrapper{
+    /* border: green 2.5px solid; */
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.363);
+}
+.box{
+    width: 33.3333333%;
+    /* border: black solid 5px; */
+    float: left;
+    padding: 2rem;
+    text-align: center;
+    
+}
+.box-wrapper::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.box1,.box3{
+    background-color: #263238;
+    color: white;
+}
+.box2{
+    background-color:#E32636;
+    color: #ffffff;
+}
+
+/* ########### footer styling ############# */
+
+
+.footer{
+    padding: 2rem ;
+    background-color: #263238;
+    color: #ffffff;
+    text-align: center;
+}
+
+.social-link i{
+    margin: 2rem;
+}
+
+/* ###########33 ABOUT STYLING ################# */
+.about{
+    /* padding: 5em 0; */
+}
+
+.about-wrapper{
+    /* border: red solid 2.5px; */
+    text-align: center;
+    margin: 2rem;
+}
+.about-heading::after{
+    content: '';
+    display: block;
+    border-bottom: 5px solid #e63946;
+    width: 100%;
+}
+
+.about-wrapper::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+ 
+.about-wrapper .ab-left{
+    float: left;
+    width: 50%;
+}
+.about-wrapper .ab-right{
+    float: right;
+    width: 50%;
+}
+
+.about-wrapper li::before{
+    content: "\2713";
+    color: #E32636;
+    font-weight: bold;
+    padding: 1rem;
+
+}
+
+.count-item{
+    float: left;
+    text-align: center;
+    /* border: red solid 2.5px; */
+    width: 25%;
+}
+.count .count-item{
+    /* margin: 2rem; */
+    text-align: center;
+}
+.count{
+    margin-top: 3rem;
+    /* border: black solid 2.5px; */
+}
+.count::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.count-item span{
+    font-size: 3rem;
+    font-weight: 650;
+    color: red;
+}
+.count-item p{
+    /* font-size: 3rem; */
+    font-weight: 650;
+    /* color: red; */
+}
+
+/* ############# banner styling ############# */
+.banner{
+    text-align: center;
+    /* max-width: 1200px; */
+width: 100%;
+    /* border: green solid 2.5px; */
+    color: #f4f4f4;
+    background: #E32636;
+    padding: 1rem;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.247);
+    /* margin-top: 1rem; */
+    margin-right: 0 auto;
+   
+}
+.btn-banner{
+    color: #f4f4f4;
+    border: #f4f4f4 solid 2px;
+    text-align: center;
+    padding: 0.3rem ;
+    display: inline-block;
+     margin-top: 0.5rem;
+    text-align: center;
+    font-weight: 650;
+    font-size: 2rem;
+    /* letter-spacing: 0.5rem; */
+    text-transform: uppercase;
+    /* height: 100%; */
+
+}
+.banner-p{
+    font-weight: 650;
+    font-size: 2rem;
+    margin-top: 1.6rem;
+}
+.banner .banner-right{
+    float:right;
+    width: 50%;
+    /* border: springgreen solid 2.5px; */
+    /* text-align: right; */
+}
+.banner .banner-left{
+    float: left;
+    width: 50%;
+    /* border: springgreen solid 2.5px; */
+}
+}
+.banner::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.banner-main{
+    /* border: blue solid 5px; */
+    background: #E32636;
+}
+.banner-main::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/* ###################3 contact styling #######################33 */
+.contact{
+    /* border: 2.5px solid orange; */
+    padding: 5rem 0;
+    background: #f7f7f7;
+    
+}
+
+
+.contact-wrapper{
+    /* border: 5px solid red; */
+}
+ .contact-info{
+    /* border: 2.5px solid green; */
+    background: #ffffff;
+    float: left;
+    width: 49%;
+    height: 760px;
+    padding: 1rem;
+}
+
+
+
+.contact-wrapper::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.contact-wrapper .contact-info i{
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.contact-wrapper .contact-info h2{
+    display: inline-block;
+    text-transform: uppercase;
+}
+.contact-wrapper .add-group{
+    margin-bottom: 3rem;
+}
+.contact-wrapper .contact-info img{
+    max-width: 90%;
+    object-fit: cover;
+    max-height: 45rem;
+    object-position: center;
+}
+
+.contact-form::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.contact-wrapper .contact-form{
+    float: left;
+    width: 49%;
+    height: 760px;
+    padding: 1rem;
+    background: #ffffff;
+    /* border: 2.5px dotted green; */
+    margin-right: 0;
+    margin-left: 2.3rem;
+}
+/* .contact-form h1::after{
+    content: '';
+    display: block;
+    clear: both;
+    border: 2.5px solid #E32636;
+} */
+.contact-form h1{
+    border-bottom: 3.5px solid #E32636;
+}
+.contact-wrapper .contact-form label{
+    display: block;
+    
+}
+.contact-wrapper .contact-form input{
+    display: block;
+    width: 100%;
+}
+.contact-wrapper .contact-form .form-group{
+    margin-bottom: 1.2rem;
+}
+.contact-wrapper .contact-form label::after{
+    /* display: block; */
+    content: '*';
+    color: #E32636;
+    
+}
+
+.contact-wrapper .contact-form textarea{
+
+    width: 100%;
+    height: 250px;
+    padding: 1rem;
+}
+
+.contact-form .form-btn{
+    display: block;
+    background: #E32636;
+    color: #ffffff;
+    margin: 0 auto;
+    padding: 0.5em 3em;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+
+/* ############## MEDIA QUERIES FOR MAKING RESPONSIVE WEBSITE ####################### */
+@media (max-width:500px){
+    html{
+    font-size: 50%;
+    }
+
+/* ############ finish float #############3 */
+  .navbar .list_item, .navbar .logo{
+    float: none;
+    text-align: center;
+    display: block;
+    width: 100%;
+     }
+
+ /* /#############55 to hide the useless text or unnecessary or heading ########## */
+    
+     .header-content .large_heading{
+         display: none; 
+         /* font-size: 75%; */
+     }
+
+     /* ##### this disn't work for me #######333 */
+     /* .row .row1 .text-box, .row .row1 .img-box{
+        float: none;
+     } */
+
+     /* ###########3 to set the showcase ########## */
+     .row{
+         height: auto;
+         width: 100%;
+     }
+     .row .text-box,
+     .row .img-box {
+         float: none;
+         text-align: center;
+         width: 100%;
+     }
+     row .text-box p,
+     /* .row .text-box a, */
+     .row .text-box h1,
+     .row .img-box img{
+         width: 100%;
+     }
+
+     /* ############to set features########## */
+     .box{
+         float: none;
+         height: 100%;
+         width: 100%;
+         margin-bottom: 2rem;
+         box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.363);
+     }
+     .box-wrapper{
+        /* border: green 2.5px solid; */
+        box-shadow: none;
+    }
+    /* ##########3 it didn't work ##########c  */
+     /* .box .box1,
+     .box .box2{
+         float: none;
+         width: 100%;
+         margin-bottom: 2rem;
+     } */
+
+     /* #########3 about page ########3 */
+     .banner-main .banner-left,
+     .banner-main .banner-right{
+        float: none;
+        text-align: center;
+        width: 100%;
+
+     }
+     /* ##############3 contact ##########3 */
+     .contact-wrapper .contact-info,
+     .contact-wrapper .contact-form{
+         float: none;
+         width: 100%;
+         margin-bottom: 2.5rem;
+         height: auto;
+     }
+     .contact-wrapper .contact-form{
+        float: none;
+        width: 100%;
+        margin-bottom: 2.5rem;
+        height: auto;
+        margin-left: 0;
+    }
+}
+
+@media (min-width:501px) and(max-width:787px){
+
+html{
+    font-size: 505;
+}
+p{
+    font-size: 1.8rem;
+}
+.navbar .list_item, .navbar .logo{
+    float: none;
+    text-align: center;
+    display: block;
+    width: 100%;
+     }
+
+ /* /#############55 to hide the useless text or unnecessary or heading ########## */
+    
+    
+
+     /* ##### this disn't work for me #######333 */
+     /* .row .row1 .text-box, .row .row1 .img-box{
+        float: none;
+     } */
+
+     /* ###########3 to set the showcase ########## */
+     .row{
+         height: auto;
+         width: 100%;
+     }
+     .row .text-box,
+     .row .img-box {
+         float: none;
+         text-align: center;
+         width: 100%;
+     }
+     row .text-box p,
+     /* .row .text-box a, */
+     .row .text-box h1,
+     .row .img-box img{
+         width: 100%;
+     }
+
+     /* ############to set features########## */
+     .box{
+         float: none;
+         height: 100%;
+         width: 100%;
+         margin-bottom: 2rem;
+         box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.363);
+     }
+     .box-wrapper{
+        /* border: green 2.5px solid; */
+        box-shadow: none;
+    }
+    /* ##########3 it didn't work ##########c  */
+     /* .box .box1,
+     .box .box2{
+         float: none;
+         width: 100%;
+         margin-bottom: 2rem;
+     } */
+
+     /* #########3 about page ########3 */
+     .banner-main .banner-left,
+     .banner-main .banner-right{
+        float: none;
+        text-align: center;
+        width: 100%;
+
+     }
+     /* ##############3 contact ##########3 */
+     .contact-wrapper .contact-info,
+     .contact-wrapper .contact-form{
+         float: none;
+         width: 100%;
+         margin-bottom: 2.5rem;
+         height: auto;
+     }
+     .contact-wrapper .contact-form{
+        float: none;
+        width: 100%;
+        margin-bottom: 2.5rem;
+        height: auto;
+        margin-left: 0;
+    }
+
+}
+
+@media (min-width:768px) and(max-width:1200px){
+
+
+html{
+    font-size: 56.25%;
+}
+}
+
+/* ########### to landscape mode############3 */
+@media(orientation: landscape) and (max-width:500px){
+ .header{
+    /* <!--height ya width: jo bh zada hogi uske equal hojaegi height -->  */
+     height: 90vmax;
+  
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
